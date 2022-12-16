@@ -23,7 +23,7 @@
 				<view v-for="(item,index) in productList" :key="index" class="flex align-center margin-top-sm " style="width: 50%"
 					@click="getTabBar('/')">
 					<view class="">
-						<image :src="item.img" mode="" style="width: 300rpx;height: 300rpx;"></image>
+						<image :src="item.img" mode="aspectFill" style="width: 300rpx;height: 300rpx;"></image>
 						<view class="margin-left-sm">
 							<view class="text-gray">品牌名称:
 								<text class="text-black">{{ item.name }}</text>

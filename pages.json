@@ -13,7 +13,10 @@
 			"path":"src/pages/shoppingCart/shoppingCart"
 		},
 		{
-			"path":"src/pages/life/my"
+			"path":"src/pages/life/my",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
 		}
 
 	],
