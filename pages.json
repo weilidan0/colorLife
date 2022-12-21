@@ -18,7 +18,12 @@
 				"navigationBarTitleText": "个人中心"
 			}
 		}
-
+	{
+			"path":"src/pages/index/orCode",
+			"style": {
+				"navigationBarTitleText": "名片"
+			}
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
