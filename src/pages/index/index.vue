@@ -2,12 +2,12 @@
   <view class="padding-bottom-xl">
     <!-- 轮播图 -->
     <view>
-		<!-- :class="[index === current && 'indicator__dot--active']" -->
-		 <!-- @change="e => current = e.current" -->
+      <!-- :class="[index === current && 'indicator__dot--active']" -->
+      <!-- @change="e => current = e.current" -->
       <u-swiper :list="imglist5">
         <view slot="indicator" class="indicator">
           <view class="indicator__dot" v-for="(item, index) in imglist5" :key="index"
-                >
+          >
           </view>
         </view>
       </u-swiper>
@@ -23,16 +23,23 @@
     </view>
     <!-- 推荐商品 -->
     <view class="padding-lr-sm margin-top-sm flex justify-between" style="width: 100%;flex-wrap:wrap">
-      <view v-for="(item,index) in productList" :key="index" class="margin-top-sm bg-white padding-bottom-sm" style="width: 47%;border-radius: 10px"
-            @click="getTabBar('/')">
+      <view v-for="(item,index) in productList" :key="index" class="margin-top-sm bg-white padding-bottom-sm"
+            style="width: 47%;border-radius: 10px"
+            @click="getPath('/src/pages/index/details')">
         <image :src="item.img" mode="aspectFill" style="width: 100%;height: 300rpx;border-radius: 10px"></image>
         <view class="margin-left-sm margin-top-sm">
           <view class="text-black">{{ item.name }}</view>
           <view class="text-gray ">
-            <text class="text-sm">{{item.brand}}</text>| <text class="text-sm">{{item.skin}}</text>| <text class="text-sm">{{item.origin}}</text>
+            <text class="text-sm">{{ item.brand }}</text>
+            |
+            <text class="text-sm">{{ item.skin }}</text>
+            |
+            <text class="text-sm">{{ item.origin }}</text>
           </view>
           <view class="flex align-end">
-            <view class="text-red">￥<text class="text-xl text-bold">{{ item.price }}</text></view>
+            <view class="text-red">￥
+              <text class="text-xl text-bold">{{ item.price }}</text>
+            </view>
             <view class="text-gray text-sm margin-left-sm">{{ item.number }}+人付款</view>
           </view>
         </view>
@@ -54,38 +61,38 @@ export default {
       ],
       productList: [{
         name: "送女友口红完美",
-        brand:"完美日记",
-        skin:"任何肤质",
-        origin:"中国",
+        brand: "完美日记",
+        skin: "任何肤质",
+        origin: "中国",
         price: "9.9",
-        number:1000,
+        number: 1000,
         img: 'https://t14.baidu.com/it/u=4247635420,861139513&fm=224&app=112&f=JPEG?w=500&h=500'
       },
         {
           name: "官方授权丝绒保权",
-          brand:"花西子",
-          skin:"任何肤质",
-          origin:"中国",
+          brand: "花西子",
+          skin: "任何肤质",
+          origin: "中国",
           price: "9.9",
-          number:8000,
+          number: 8000,
           img: 'https://img1.baidu.com/it/u=1185397408,1454519325&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=844'
         },
         {
           name: "INTOYOU水雾唇泥",
-          brand:"intoyou",
-          skin:"任何肤质",
-          origin:"中国",
+          brand: "intoyou",
+          skin: "任何肤质",
+          origin: "中国",
           price: "9.9",
-          number:9000,
+          number: 9000,
           img: 'https://img1.baidu.com/it/u=1209296426,254792387&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500'
         },
         {
           name: "热巴同款colorKey坷垃",
-          brand:"colorKey",
-          skin:"任何肤质",
-          origin:"中国",
+          brand: "colorKey",
+          skin: "任何肤质",
+          origin: "中国",
           price: "9.9",
-          number:8000,
+          number: 8000,
           img: 'https://t14.baidu.com/it/u=402068458,3006785633&fm=224&app=112&f=JPEG?w=500&h=500'
         }
       ]
@@ -95,10 +102,8 @@ export default {
 
   },
   methods: {
-    getTabBar(path) {
-      uni.redirectTo({
-        url: path
-      })
+    getPath(path) {
+      uni.navigateTo({url: path})
     },
     add() {
       console.log('韦丽丹')
