@@ -8,12 +8,6 @@
       }
     },
     {
-      "path": "src/pages/index/details",
-      "style": {
-        "navigationBarTitleText": "商品详情"
-      }
-    },
-    {
       "path": "src/pages/classIfication/classIfication"
     },
     {
@@ -23,6 +17,18 @@
       "path": "src/pages/life/my",
       "style": {
         "navigationBarTitleText": "个人中心"
+      }
+    },
+    {
+      "path": "src/pages/index/orCode",
+      "style": {
+        "navigationBarTitleText": "名片"
+      }
+    },
+    {
+      "path": "src/pages/index/details",
+      "style": {
+        "navigationBarTitleText": "商品详情"
       }
     }
   ],
