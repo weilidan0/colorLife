@@ -4,7 +4,7 @@
     <view>
       <!-- :class="[index === current && 'indicator__dot--active']" -->
       <!-- @change="e => current = e.current" -->
-      <u-swiper :list="imglist5">
+      <u-swiper :list="imglist5" height="200">
         <view slot="indicator" class="indicator">
           <view class="indicator__dot" v-for="(item, index) in imglist5" :key="index"
           >
@@ -25,7 +25,7 @@
     <view class="padding-lr-sm margin-top-sm flex justify-between" style="width: 100%;flex-wrap:wrap">
       <view v-for="(item,index) in productList" :key="index" class="margin-top-sm bg-white padding-bottom-sm"
             style="width: 47%;border-radius: 10px"
-            @click="getPath('/src/pages/index/details')">
+            @click="getPath('/src/pages/detailsList/goodsDetails')">
         <image :src="item.img" mode="aspectFill" style="width: 100%;height: 300rpx;border-radius: 10px"></image>
         <view class="margin-left-sm margin-top-sm">
           <view class="text-black">{{ item.name }}</view>
@@ -103,7 +103,9 @@ export default {
   },
   methods: {
     getPath(path) {
-      uni.navigateTo({url: path})
+      uni.navigateTo({
+        url: path
+      })
     },
     add() {
       console.log('韦丽丹')

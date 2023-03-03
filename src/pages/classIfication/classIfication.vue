@@ -21,13 +21,13 @@
           </view>
         </scroll-view>
       </view>
-      <view class="">
-        <scroll-view scroll-y="true" style="height: 500px">
+      <view class="margin-left">
+        <scroll-view scroll-y="true" style="height: 630px">
           <view v-for="item in listMage" :key="item.index">
             <view class="margin-tb-sm bg-orange light radius padding-tb-xs text-center" style="width: 80px;">{{ item.name }}</view>
             <view class="flex">
               <view v-for="(child,childIndex) in item.srcList" :key="childIndex" class="margin-right-sm">
-                <image :src="child.src" style="width: 60px;height: 60px"></image>
+                <image :src="child.src" style="width: 65px;height: 65px"></image>
                 <view class="text-center">{{child.name}}</view>
               </view>
             </view>
